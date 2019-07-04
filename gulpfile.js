@@ -20,8 +20,6 @@ function browserSyncReload(done){
     done();
 }
 
-gulp
-
 gulp.task('css', function () {
     return gulp.src("./scss/*.scss")
         .pipe(sass())
