@@ -23,7 +23,7 @@ function browserSyncReload(done){
 
 // CSS Task
 gulp.task('css', function () {
-    return gulp.src("./scss/*.scss")
+    return gulp.src('./scss/*.scss')
         .pipe(sass())
         .pipe(cssnano())
         .pipe(gulp.dest('dist/css'))
@@ -43,7 +43,7 @@ gulp.task('js', function () {
 gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', gulp.series('css'));
     gulp.watch('./js/**/*.js', gulp.series('js'));
-    gulp.watch("./**/*.html",browserSyncReload);
+    gulp.watch('./**/*.html',browserSyncReload);
 });
 
 gulp.task('watch', gulp.series(gulp.parallel('css', 'js'), gulp.parallel('watch', browserSync)));
