@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp prod",
-    "dev": "gulp watch"
+    "dev": "gulp dev"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^6.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2"
   }

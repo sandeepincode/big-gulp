@@ -4,6 +4,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var browsersync = require('browser-sync').create();
+var imagemin = require("gulp-imagemin");
 
 // Browser Sync Config
 function browserSync(done) {
@@ -39,12 +40,24 @@ gulp.task('js', function () {
         .pipe(browsersync.stream());
 });
 
+// Compression Image Task
+gulp.task('img', function () {
+    return gulp.src(['./img/**'])
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'))
+        .pipe(browsersync.stream());
+});
+
 // Watch Process
 gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', gulp.series('css'));
     gulp.watch('./js/**/*.js', gulp.series('js'));
+    gulp.watch('./img/**', gulp.series('img'));
     gulp.watch('./**/*.html',browserSyncReload);
 });
 
-gulp.task('watch', gulp.series(gulp.parallel('css', 'js'), gulp.parallel('watch', browserSync)));
-gulp.task('prod', gulp.series(gulp.parallel('css', 'js'), browserSync));
+const build = gulp.series(gulp.parallel('css', 'js'), 'img');
+
+gulp.task('dev', gulp.series(gulp.parallel(build, browserSync, 'watch')));
+
+gulp.task('prod', gulp.series(build, browserSync));
