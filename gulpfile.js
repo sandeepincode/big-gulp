@@ -5,6 +5,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var browsersync = require('browser-sync').create();
 
+// Browser Sync Config
 function browserSync(done) {
     browsersync.init({
         server: {
@@ -20,6 +21,7 @@ function browserSyncReload(done){
     done();
 }
 
+// CSS Task
 gulp.task('css', function () {
     return gulp.src("./scss/*.scss")
         .pipe(sass())
@@ -28,6 +30,7 @@ gulp.task('css', function () {
         .pipe(browsersync.stream());
 });
 
+// JS Task
 gulp.task('js', function () {
     return gulp.src(['./js/plugins/*.js', './js/*.js'])
         .pipe(concat('all.js'))
@@ -36,14 +39,12 @@ gulp.task('js', function () {
         .pipe(browsersync.stream());
 });
 
+// Watch Process
 gulp.task('watch', function () {
     gulp.watch('./scss/**/*.scss', gulp.series('css'));
     gulp.watch('./js/**/*.js', gulp.series('js'));
     gulp.watch("./**/*.html",browserSyncReload);
 });
 
-// gulp.task('dev', gulp.series('css', 'js', 'watch'));
-// gulp.task('dev', gulp.series('watch'));
-// gulp.task('default', ['sass', 'js', 'webpack']);
-
 gulp.task('watch', gulp.series(gulp.parallel('css', 'js'), gulp.parallel('watch', browserSync)));
+gulp.task('prod', gulp.series(gulp.parallel('css', 'js'), browserSync));
