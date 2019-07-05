@@ -1,3 +1,8 @@
-function testFunction() {
-    alert('Here is a d function using: ' + testText);
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
 }

@@ -1,31 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <title>Big Gulp</title>
+    <title>Big Gulp</title>
 
-        <!-- Custom Theme CSS -->
-        <link rel="stylesheet" href="./dist/css/style.css">
+    <!-- Custom Theme CSS -->
+    <link href="dist/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom Theme JS -->
+    <script src="dist/js/all.js"></script>
+</head>
+<body>
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
-    </head>
-    <body>
+
+<div>
+
+    <div class="topnav" id="myTopnav">
         <div>
-            <div>
-                <h1 class="red">THIS SHOULD BE RED</h1>
+            <a href="#home" class="active">HOME</a>
+            <a href="#blog">BLOG</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#templates">TEMPLATES</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="banner">
+            <div class="items">
+                <img class="logo" src="./img/logo.png"/>
+                <div class="mainheading">TRUE NORTH</div>
+                <div class="subheading"> - 2015 -</div>
             </div>
         </div>
+    </div>
 
-        <!-- Custom Theme JS -->
-        <script src="dist/js/all.js"></script>
+    <div class="content-panel mb0">
+        <div class="content">
+            <div class="header">
+                WELCOME
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+        </div>
+    </div>
 
-        <!-- Bootstrap JS -->
-        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    </body>
+    <div class="content-panel">
+        <div class="content">
+            <div class="header">
+                PORTFOLIO
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="Grid Grid--gutters Grid--cols-3 u-textCenter">
+                <div class="Grid-cell">
+                    <div class="cell objects">OBJECTS</div>
+                </div>
+                <div class="Grid-cell">
+                    <div class="cell spring">SPRING</div>
+                </div>
+                <div class="Grid-cell">
+                    <div class="cell nature">NATURE</div>
+                </div>
+            </div>
+            <div class="Grid Grid--gutters Grid--cols-3 u-textCenter">
+                <div class="Grid-cell">
+                    <div class="cell icons">ICONS</div>
+                </div>
+                <div class="Grid-cell">
+                    <div class="cell arch">ARCHITECTURE</div>
+                </div>
+                <div class="Grid-cell">
+                    <div class="cell mockup">IPHONE MOCKUP</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content-panel mb0 lg">
+        <div class="box-panel">
+            <div class="about-panel">
+                <div class="content">
+                    <div class="heading">ABOUT ME</div>
+                    <div>
+                        <img src="img/root/about/portrait.png" alt="Profile Photo">
+                    </div>
+                    <div class="intro">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-facebook-f fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-dribbble fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-vimeo fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="content bottom">
+                    <div class="bottomNav">
+                        <div class="bottomLinks">
+                            <a href="#home" class="active">HOME</a>
+                            <a href="#blog">BLOG</a>
+                            <a href="#portfolio">PORTFOLIO</a>
+                            <a href="#about">ABOUT</a>
+                        </div>
+                        <img class="logo bottom" src="./img/logo.png"/>
+                        <div class="mainheading bottom">TRUE NORTH</div>
+                        <div class="subheading bottom"> - 2015 -</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 </html>

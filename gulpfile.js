@@ -57,7 +57,5 @@ gulp.task('watch', function () {
 });
 
 const build = gulp.series(gulp.parallel('css', 'js'), 'img');
-
 gulp.task('dev', gulp.series(gulp.parallel(build, browserSync, 'watch')));
-
 gulp.task('prod', gulp.series(build, browserSync));
